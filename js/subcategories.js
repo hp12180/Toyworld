@@ -8,7 +8,7 @@ var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScro
 var employees;
 
 $(window).load(function() {
-	setTimeout(getEmployeeList, 100);
+	setTimeout(getsubcagoriesList, 100);
 });
 
 $(document).ajaxError(function(event, request, settings) {
@@ -16,7 +16,7 @@ $(document).ajaxError(function(event, request, settings) {
 	alert("Error accessing the server");
 });
 
-function getEmployeeList() {
+function getsubcagoriesList() {
 	$('#busy').show();
 	$.getJSON(serviceURL + 'getemployees.php?id='+id, function(data) {
 		$('#busy').hide();
