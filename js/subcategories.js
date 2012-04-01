@@ -6,7 +6,7 @@ var id = getUrlVars()["id"];
 
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
-var employees;
+var subcats;
 
 $(window).load(function() {
 	setTimeout(getsubcagoriesList, 100);
@@ -22,10 +22,10 @@ function getsubcagoriesList() {
 	$.getJSON(serviceURL + 'getemployees.php?id='+id, function(data) {
 		$('#busy').hide();
 		$('#subcategoriesList li').remove();
-		employees = data.items;
-		$.each(employees, function(index, employee) {
-			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + employee.categories_id + '">' +
-					'<p class="line1">' + employee.categories_name + '</p>');
+		subcats = data.items;
+		$.each(subcats, function(index, subcat) {
+			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + subcat.categories_id + '">' +
+					'<p class="line1">' + subcat.categories_name + 'hp</p>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
