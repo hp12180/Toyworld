@@ -19,7 +19,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getsubcagoriesList() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'getemployees.php?id='+id, function(data) {
+	$.getJSON(serviceURL + 'getemployees.php', function(data) {
 		$('#busy').hide();
 		$('#subcategoriesList li').remove();
 		subcats = data.items;
