@@ -1,6 +1,7 @@
 localStorage['serviceURL'] = "http://toyworld.in/app/services/";
 var serviceURL = localStorage['serviceURL'];
 
+var id = getUrlVars()["id"];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
 var employees;
@@ -16,7 +17,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getEmployeeList() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'getemployees.php', function(data) {
+	$.getJSON(serviceURL + 'getemployees.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#employeeList li').remove();
 		employees = data.items;
