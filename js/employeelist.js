@@ -1,7 +1,6 @@
 localStorage['serviceURL'] = "http://toyworld.in/app/services/";
 var serviceURL = localStorage['serviceURL'];
 
-var id = getUrlVars()["id"];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
 var employees;
