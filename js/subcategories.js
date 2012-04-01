@@ -20,10 +20,10 @@ function getsubcagoriesList() {
 	$('#busy').show();
 	$.getJSON(serviceURL + 'getemployees.php?id='+id, function(data) {
 		$('#busy').hide();
-		$('#employeelist li').remove();
+		$('#subcategoriesList li').remove();
 		employees = data.items;
 		$.each(employees, function(index, employee) {
-			$('#employeelist').append('<li><a href="subcategories.html?id=' + employee.categories_id + '">' +
+			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + employee.categories_id + '">' +
 					'<p class="line1">' + employee.categories_name + '</p>');
 		});
 		setTimeout(function(){
