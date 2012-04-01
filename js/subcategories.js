@@ -19,7 +19,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getsubcagoriesList() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'getemployees.php', function(data) {
+	$.getJSON(serviceURL + 'getemployees.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#subcategoriesList li').remove();
 		subcats = data.items;
@@ -31,4 +31,16 @@ function getsubcagoriesList() {
 			scroll.refresh();
 		});
 	});
+}
+
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
 }
