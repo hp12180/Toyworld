@@ -16,7 +16,7 @@ $(document).ajaxError(function(event, request, settings) {
 	alert("Error accessing the server");
 });
 
-function getsubcagoriesList() {
+function getprodList() {
 	$('#busy').show();
 	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
 		$('#busy').hide();
