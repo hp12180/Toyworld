@@ -26,6 +26,9 @@ function getsubcagoriesList() {
 			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + subcat.categories_id + '">' +
 					'<p class="line1">' + subcat.categories_name + '</p>');
 		});
+		setTimeout(function(){
+			scroll.refresh();
+		});
 	});
 	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
 		$('#productsList li').remove();
