@@ -1,4 +1,3 @@
-localStorage['serviceURL'] = "http://toyworld.in/app/services/";
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
@@ -19,13 +18,21 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getsubcagoriesList() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'getemployees.php?id=' + id, function(data) {
+	$.getJSON(serviceURL + 'getsubcats.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#subcategoriesList li').remove();
 		subcats = data.items;
 		$.each(subcats, function(index, subcat) {
 			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + subcat.categories_id + '">' +
 					'<p class="line1">' + subcat.categories_name + '</p>');
+		});
+	});
+	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
+		$('#productsList li').remove();
+		subcats = data.items;
+		$.each(subcats, function(index, subcat) {
+			$('#productsList').append('<li><a href="product.html?id=' + subcat.categories_id + '">' +
+					'<p class="line1">' + subcat.products_name + '</p>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
