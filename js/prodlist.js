@@ -21,10 +21,10 @@ function getsubcagoriesList() {
 	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#productsList li').remove();
-		subcats = data.items;
-		$.each(subcats, function(index, subcat) {
-			$('#productsList').append('<li><a href="product.html?id=' + subcat.products_id + '">' +
-					'<p class="line1">' + subcat.products_name + '</p>');
+		prodlist = data.items;
+		$.each(prodlist, function(index, prods) {
+			$('#productsList').append('<li><a href="product.html?id=' + prods.products_id + '">' +
+					'<p class="line1">' + prods.products_name + '</p>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
