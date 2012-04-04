@@ -21,7 +21,7 @@ function getprodDetails() {
 		pdetails = data.items;
 		$.each(pdetails, function(index, pdetail) {
 			$('#productDetails').append('<li><img src="http://toyworld.in/catalog/images/' + pdetail.products_image + '" width="100%">' +
-					'<p class="line1">' + pdetail.products_name + '</p><br>' + pdetail.products_description + '<br><br>Ages:' + pdetail.products_minage + ' ' + pdetail.products_maxage + '<br><b>Price Rs.' + pdetail.products_price + '</b><br><br>');
+					'<p class="line1">' + pdetail.products_name + '</p><br>' + pdetail.products_description + '<br><br>Ages:' + pdetail.products_minage + ' ' + pdetail.products_maxage + '<br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
 		});
 		setTimeout(function(){
 			scroll.refresh();

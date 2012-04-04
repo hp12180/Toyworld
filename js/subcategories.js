@@ -1,5 +1,5 @@
 var serviceURL = localStorage['serviceURL'];
-var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
+var scroll = new iScroll('wrapper', { vScrollbar: true, hScrollbar:false, hScroll: false });
 
 var id = getUrlVars()["id"];
 
