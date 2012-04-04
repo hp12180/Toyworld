@@ -1,5 +1,6 @@
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
+var scroll1 = new iScroll('prodwrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
 var id = getUrlVars()["id"];
 
@@ -42,7 +43,7 @@ function getprodList() {
 					'<p class="line1">' + prods.products_name + ' - Rs.' + prods.total_price + '</p>');
 		});
 		setTimeout(function(){
-			scroll.refresh();
+			scroll1.refresh();
 		});
 	});
 }

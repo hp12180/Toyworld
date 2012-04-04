@@ -18,10 +18,12 @@ function getprodDetails() {
 	$.getJSON(serviceURL + 'getproddetails.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#productDetails li').remove();
+		$('#productName li').remove();
 		pdetails = data.items;
 		$.each(pdetails, function(index, pdetail) {
 			$('#productDetails').append('<li><img src="http://toyworld.in/catalog/images/' + pdetail.products_image + '" width="100%">' +
-					'<p class="line1">' + pdetail.products_name + '</p><br>' + pdetail.products_description + '<br><br>Ages:' + pdetail.products_minage + ' ' + pdetail.products_maxage + '<br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
+					'<br>' + pdetail.products_description + '<br><br>Ages:' + pdetail.products_minage + ' ' + pdetail.products_maxage + '<br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
+			$('#productName').append('<h2>' + pdetail.products_name + '</h2>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
