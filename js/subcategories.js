@@ -1,6 +1,5 @@
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-var scroll1 = new iScroll('prodwrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
 var id = getUrlVars()["id"];
 
@@ -36,14 +35,13 @@ function getprodList() {
 	$('#busy').show();
 	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
 		$('#busy').hide();
-		$('#productsList li').remove();
 		prodlist = data.items;
 		$.each(prodlist, function(index, prods) {
-			$('#productsList').append('<li><a href="product.html?id=' + prods.products_id + '">' +
+			$('#subcategoriesList').append('<li><a href="product.html?id=' + prods.products_id + '">' +
 					'<p class="line1">' + prods.products_name + ' - Rs.' + prods.total_price + '</p>');
 		});
 		setTimeout(function(){
-			scroll1.refresh();
+			scroll.refresh();
 		});
 	});
 }
