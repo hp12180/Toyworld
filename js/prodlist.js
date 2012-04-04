@@ -12,14 +12,11 @@ $(window).load(function() {
 });
 
 $(document).ajaxError(function(event, request, settings) {
-	$('#busy').hide();
 	alert("Error accessing the server");
 });
 
 function getprodList() {
-	$('#busy').show();
 	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
-		$('#busy').hide();
 		$('#productsList li').remove();
 		prodlist = data.items;
 		$.each(prodlist, function(index, prods) {
