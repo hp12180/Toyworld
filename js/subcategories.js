@@ -3,12 +3,11 @@ var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScro
 
 var id = getUrlVars()["id"];
 
-var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-
 var subcats;
-
+var prodlist;
 $(window).load(function() {
 	setTimeout(getsubcagoriesList, 100);
+	setTimeout(getprodList, 100);
 });
 
 $(document).ajaxError(function(event, request, settings) {
@@ -25,6 +24,17 @@ function getsubcagoriesList() {
 		$.each(subcats, function(index, subcat) {
 			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + subcat.categories_id + '">' +
 					'<p class="line1">' + subcat.categories_name + '</p>');
+		});
+	});
+}
+
+function getprodList() {
+	$.getJSON(serviceURL + 'getprodlist.php?id=' + id, function(data) {
+		$('#productsList li').remove();
+		prodlist = data.items;
+		$.each(prodlist, function(index, prods) {
+			$('#productsList').append('<li><a href="product.html?id=' + prods.products_id + '">' +
+					'<p class="line1">' + prods.products_name + '</p>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
