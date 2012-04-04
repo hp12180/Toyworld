@@ -37,7 +37,7 @@ function getprodList() {
 		prodlist = data.items;
 		$.each(prodlist, function(index, prods) {
 			$('#productsList').append('<li><a href="product.html?id=' + prods.products_id + '">' +
-					'<p class="line1">' + prods.products_name + '</p>');
+					'<p class="line1">' + prods.products_name + ' - Rs.' + prods.total_price + '</p>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
