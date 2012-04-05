@@ -1,4 +1,3 @@
-localStorage['serviceURL'] = "http://toyworld.in/app/services/";
 var serviceURL = localStorage['serviceURL'];
 
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
@@ -21,7 +20,7 @@ function getbrandList() {
 		brands = data.items;
 		$.each(brands, function(index, brand) {
 			$('#brandList').append('<li><a href="branddet.html?id=' + brand.manufacturers_id + '">' +
-					'<img src="http://toyworld.in/catalog/images/' + brand.manufacturers_image + '">' + brand.manufacturers_name + ' (' +brand.tot_prods + ')</p>');
+					'<img src="http://toyworld.in/catalog/images/' + brand.manufacturers_image + '" width="50"><br>' + brand.manufacturers_name + ' (' +brand.tot_prods + ')<br><br>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
