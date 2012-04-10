@@ -5,7 +5,6 @@ var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
 var userdetails;
-var userdetails1;
 
 $(window).load(function() {
 	setTimeout(getcatList, 100);
@@ -20,10 +19,11 @@ function getcatList() {
 	$.getJSON(serviceURL + 'login.php?id='+id+'&pwd='+pwd, function(data) {
 		$('#busy').hide();
 		$('#userDet li').remove();
-		userdetails = data.login_status;
-		userdetails1 = data.login_message;
-			$('#userDet').append('<li>' + userdetails +
-					'<p class="line1">' + userdetails1 + '</p>');
+		userdetails = data.items;
+		$.each(userdetails, function(index, userdetail) {
+			$('#userDet').append('<li>' + userdetail.customer_firstname + ' ' + userdetail.customer_lastname
+					'<p class="line1">' + catlist.customers_email_address + '</p>');
+		});
 		setTimeout(function(){
 			scroll.refresh();
 		});
