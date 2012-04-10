@@ -21,7 +21,7 @@ function getuserdet() {
 		$('#userDet li').remove();
 		userdetails = data.items;
 		$.each(userdetails, function(index, userdetail) {
-			$('#userDet').append('<li>' + userdetail.customer_firstname + ' ' + userdetail.customer_lastname
+			$('#userDet').append('<li>' + userdetail.customers_firstname + ' ' + userdetail.customers_lastname
 					'<p class="line1">' + userdetail.customers_email_address + '</p>');
 		});
 		setTimeout(function(){
