@@ -1,4 +1,5 @@
 var id = 'hp12180@yahoo.com';
+localStorage['serviceURL'] = "http://toyworld.in/app/services/";
 var pwd = 'getright';
 var serviceURL = localStorage['serviceURL'];
 
