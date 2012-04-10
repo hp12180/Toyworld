@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "toyworld.in"
+	version 	= "1.0.0">
+
+	<name>Toyworld.in</name>
+
+	<description>
+		Buy toys, baby products, sports equipment, and more from your phone now. Free home delivery with cash on delivery option. Apps available for all platforms.
+	</description>
+
+	<author href="http://toyworld.in"
+		email="support@toyworld.in">
+		Toyworld support
+	</author>
+
+<!-- the default attribute can also be used -->
+<icon src="icons/icon.png" default="true" />
+
+<!-- specifies the icon to be displayed when hovered over (on BlackBerry) -->
+<icon src="icons/icon-hover.png" hover="true" />
+
+<!-- iOS requires specific dimensions for icons; classic iPhone screens, Retina
+    displays, and iPad screens respectively -->
+<icon src="icons/icon-iphone-57.png" width="57" height="57"/>
+<icon src="icons/icon-iphone-72.png" width="72" height="72"/>
+<icon src="icons/icon-iphone-114.png" width="114" height="114"/>
+
+<!-- Android requires specific dimensions; ldpi, mdpi, and hdpi respectively -->
+<icon src="icons/icon-android-36.png" width="36" height="36"/>
+<icon src="icons/icon-android-48.png" width="48" height="48"/>
+<icon src="icons/icon-android-72.png" width="72" height="72"/>
+
+<!-- iOS requires specific dimensions for different devices; classic iPhone
+  screens, Retina displays, and iPad screens -->
+<gap:splash src="splashes/splash.jpg"/>
+<gap:splash src="splashes/retina.png" width="640" height="960"/>
+<gap:splash src="splashes/ipad-portrait.png" width="768" height="1004"/>
+<gap:splash src="splashes/ipad-landscape.png" width="1024" height="748"/>
+
+<!-- to enable individual permissions use the following examples -->
+<feature name="http://api.phonegap.com/1.0/battery"/>
+<feature name="http://api.phonegap.com/1.0/camera"/>
+<feature name="http://api.phonegap.com/1.0/contacts"/>
+<feature name="http://api.phonegap.com/1.0/file"/>
+<feature name="http://api.phonegap.com/1.0/geolocation"/>
+<feature name="http://api.phonegap.com/1.0/media"/>
+<feature name="http://api.phonegap.com/1.0/network"/>
+<feature name="http://api.phonegap.com/1.0/notification"/>
+
+	<preference name="orientation" value="portrait" />
+</widget>
