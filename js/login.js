@@ -20,7 +20,7 @@ function getLogin() {
 		$('#userDet li').remove();
 		logindet = data.items;
 		$('#userDet').append('<li>' +
-					'<p class="line1">' + logindetail + '</p>');
+					'<p class="line1">' + logindet + '</p>');
 		setTimeout(function(){
 			scroll.refresh();
 		});
