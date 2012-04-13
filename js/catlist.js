@@ -20,8 +20,9 @@ function getcatList() {
 		catlists = data.items;
 		$.each(catlists, function(index, catlist) {
 			$('#catList').append('<div class="tile"><a href="subcategories.html?id=' + catlist.categories_id + '">' +
-					'' + catlist.categories_name + '');
+					 + catlist.categories_name);
 		});
+		$('#catList').append('<\div>');
 		setTimeout(function(){
 			scroll.refresh();
 		});
