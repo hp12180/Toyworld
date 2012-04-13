@@ -124,7 +124,7 @@ li .action-icon {
  	background: #666666; /* for non-css3 browsers */
 	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
 	color: #FFFFFF;
-	top: 0px; 
+	top: 50px; 
 	height: 50px;
 	width: 100%;
 	border-bottom: solid 1px #444444;
