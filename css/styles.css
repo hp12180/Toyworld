@@ -165,7 +165,7 @@ li .action-icon {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#ECEFF2));
 	color: #000000;
 	font-weight: bold;
-	top: 111px; 
+	top: 91px; 
 	height: 40px;
 	left: 0px;
 	right: 0px;
@@ -181,7 +181,7 @@ li .action-icon {
 
 #wrapper {
 	position: absolute; 
-	top: 170px; 
+	top: 151px; 
 	bottom: 0px;
 	width: 100%;
 	overflow: auto;
@@ -210,12 +210,13 @@ li .action-icon {
 }
 
 .tile {
+	position:relative;
 	float: left;
 	width: 120px;
 	height: 120px;
 	margin: 0 10px 10px 0;
 	padding: 97px 0 0 8px;
-	background: #00aaad;
+	background: #b10000;
 	-webkit-transform: rotateY(0deg);
 	-webkit-transform-origin: -10px;
 	-moz-transform: rotateY(0deg);
