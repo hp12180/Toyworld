@@ -7,7 +7,7 @@ var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScro
 var userdetails;
 
 $(window).load(function() {
-	setTimeout(getuserdet, 100);
+	setTimeout(getuserdet, 10000);
 });
 
 $(document).ajaxError(function(event, request, settings) {
@@ -28,4 +28,17 @@ function getuserdet() {
 			scroll.refresh();
 		});
 	});
+}
+
+
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
 }
