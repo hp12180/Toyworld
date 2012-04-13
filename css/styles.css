@@ -120,7 +120,7 @@ li .action-icon {
 
 .header {
 	position: absolute;
-	padding-top: 18px;
+	padding-top: 10px;
  	text-align: center;
  	background: #d93469; /* for non-css3 browsers */
 	background: -webkit-gradient(linear, left top, left bottom, from(#d93469), to(#d93469), color-stop(.6,#ff0052));
