@@ -124,8 +124,8 @@ li .action-icon {
  	background: #666666; /* for non-css3 browsers */
 	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
 	color: #FFFFFF;
-	top: 50px; 
-	height: 60px;
+	top: 75px; 
+	height: 50px;
 	width: 100%;
 	border-bottom: solid 1px #444444;
 }
@@ -139,19 +139,12 @@ li .action-icon {
 
 .header > .nav {
 	position: relative;
-	left: 12px;
 	height:100%;
 	padding-top: 18px;
 	padding-right: 12px;
+	padding-left: 12px;
 	border-right: solid 1px #333333;
-}
-.header > .nav1 {
-	position: absolute;
-	left: 102px;
-	height:100%;
-	padding-top: 18px;
-	padding-right: 12px;
-	border-right: solid 1px #333333;
+	border-left: solid 1px #333333;
 }
 
 .header > .action {
