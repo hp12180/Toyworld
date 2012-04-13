@@ -2,8 +2,6 @@ var serviceURL = localStorage['serviceURL'];
 
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
-var brands;
-
 $(window).load(function() {
 	setTimeout(getbrandList, 100);
 });
