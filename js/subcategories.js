@@ -35,7 +35,7 @@ function getprodList() {
 		prodlist = data.items;
 		$.each(prodlist, function(index, prods) {
 			$('#subcategoriesList').append('<li><a href="product.html?id=' + prods.products_id + '">' +
-					'<p class="line1"><img src="http://toyworld.in/catalog/images/'+ prods.products_image +'" width="50">' + prods.products_name + ' - Rs.' + prods.total_price + '</p>');
+					'<p class="line1"><img src="http://toyworld.in/catalog/images/'+ prods.products_image +'" width="50">' + prods.products_name + ' - Rs.' + prods.total_price + '</p></a></li>');
 		});
 		setTimeout(function(){
 			scroll.refresh();

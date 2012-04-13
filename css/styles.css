@@ -209,7 +209,7 @@ li .action-icon {
 	
 }
 
-.tile {
+.tile a {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 30px;

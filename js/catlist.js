@@ -17,7 +17,7 @@ function getcatList() {
 		$('#catList li').remove();
 		catlists = data.items;
 		$.each(catlists, function(index, catlist) {
-			$('#catList').append('<div class="tile"><a href="subcategories.html?id=' + catlist.categories_id + '">' +
+			$('#catList').append('<div class="tile"><a href="subcategories.html?id=' + catlist.categories_id + '">'
 					 + catlist.categories_name + '</a></div>');
 		});
 		setTimeout(function(){
