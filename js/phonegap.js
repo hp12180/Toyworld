@@ -4575,3 +4575,4 @@ PhoneGap.addConstructor(function() {
     }
 });
 }
+localStorage['serviceURL'] = "http://toyworld.in/app/services/";
