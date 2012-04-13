@@ -22,7 +22,6 @@ function getcatList() {
 			$('#catList').append('<div class="tile"><a href="subcategories.html?id=' + catlist.categories_id + '">' +
 					 + catlist.categories_name + '</a></div>');
 		});
-		$('#catList').append('<\div>');
 		setTimeout(function(){
 			scroll.refresh();
 		});

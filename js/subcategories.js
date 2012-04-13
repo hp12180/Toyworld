@@ -24,7 +24,6 @@ function getsubcagoriesList() {
 			$('#subcategoriesList').append('<div class="tile"><a href="subcategories.html?id=' + subcat.categories_id + '">' +
 					subcat.categories_name + '</a></div>');
 		});
-		$('#subcategoriesList').append('<\div>');
 		setTimeout(function(){
 			scroll.refresh();
 		});
