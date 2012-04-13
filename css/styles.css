@@ -138,7 +138,7 @@ li .action-icon {
 }
 
 .header > .nav {
-	position: absolute;
+	position: relative;
 	left: 12px;
 	height:100%;
 	padding-top: 18px;
