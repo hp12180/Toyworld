@@ -2,7 +2,7 @@ var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
 var id = 'hp12180@yahoo.com';
-
+var pwd = 'getright';
 $(window).load(function() {
 	setTimeout(getuserDetails, 100);
 });
@@ -18,8 +18,8 @@ function getuserDetails() {
 		$('#userDet li').remove();
 		pdetails = data.items;
 		$.each(pdetails, function(index, pdetail) {
-			$('#userDet').append('<li>' + pdetail.customers_firstname + ' ' + pdetail.customers_lastname + '>' +
-					'<br>' + pdetail.customers_email_address + '<br>');
+			$('#userDet').append('<li>' + pdetail.customers_firstname + ' ' + pdetail.customers_lastname + 
+					'<br>' + pdetail.customers_email_address + '<br>'+ pdetail.customers_id + '<br>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
