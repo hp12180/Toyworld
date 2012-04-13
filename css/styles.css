@@ -126,7 +126,7 @@ li .action-icon {
 	background: -webkit-gradient(linear, left top, left bottom, from(#d93469), to(#d93469), color-stop(.6,#ff0052));
 	color: #FFFFFF;
 	top: 50px; 
-	height: 50px;
+	height: 30px;
 	width: 100%;
 	border-bottom: solid 1px #444444;
 }
@@ -209,12 +209,33 @@ li .action-icon {
 	
 }
 
-#employeeDetails {
-	padding: 12px;
-/* 	margin-bottom: 12px;
- */}
-
-#employeeDetails img {
+.tile {
 	float: left;
-	margin-right: 12px;
+	width: 120px;
+	height: 120px;
+	margin: 0 10px 10px 0;
+	padding: 97px 0 0 8px;
+	background: #00aaad;
+	-webkit-transform: rotateY(0deg);
+	-webkit-transform-origin: -10px;
+	-moz-transform: rotateY(0deg);
+	-moz-transform-origin: -10px;		
+}
+.tile:nth-child(2n+1) {
+	clear: left;
+}
+
+.tile:active {
+	-webkit-transform: rotateY(10deg);
+	-webkit-transition: linear .1s;
+	-moz-transform: rotateY(10deg);
+	-moz-transition: linear .1s;	
+}
+.tile:nth-child(odd) {
+	-webkit-animation: 1s flip-odd ease;
+	-moz-animation: 1s flip-odd ease;
+}
+.tile:nth-child(even) {
+	-webkit-animation: 1.3s flip-even ease;
+	-moz-animation: 1.3s flip-even ease;
 }
