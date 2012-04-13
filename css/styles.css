@@ -119,12 +119,12 @@ li .action-icon {
 
 
 .header {
-	position:  absolute;
+	position:  relative;
  	text-align: center;
  	background: #666666; /* for non-css3 browsers */
 	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
 	color: #FFFFFF;
-	top: 75px; 
+	top: 0px; 
 	height: 50px;
 	width: 100%;
 	border-bottom: solid 1px #444444;
