@@ -21,8 +21,8 @@ function getsubcagoriesList() {
 		$('#subcategoriesList li').remove();
 		subcats = data.items;
 		$.each(subcats, function(index, subcat) {
-			$('#subcategoriesList').append('<li><a href="subcategories.html?id=' + subcat.categories_id + '">' +
-					'<p class="line1">' + subcat.categories_name + '</p>');
+			$('#subcategoriesList').append('<div class="tile"><a href="subcategories.html?id=' + subcat.categories_id + '">' +
+					subcat.categories_name + '</div>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
