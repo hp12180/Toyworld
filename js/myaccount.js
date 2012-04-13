@@ -1,7 +1,7 @@
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
-var id = getUrlVars()["id"];
+var id = 'hp12180@yahoo.com';
 
 $(window).load(function() {
 	setTimeout(getuserDetails, 100);
