@@ -210,6 +210,9 @@ li .action-icon {
 }
 
 .tile {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 30px;
 	position:relative;
 	float: left;
 	width: 180px;
