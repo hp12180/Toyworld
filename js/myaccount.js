@@ -1,31 +1,31 @@
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
+
 var id = getUrlVars()["id"];
 
 $(window).load(function() {
-	setTimeout(getuserdet, 100);
+	setTimeout(getuserDetails, 100);
 });
 
 $(document).ajaxError(function(event, request, settings) {
 	$('#busy').append('Error accessing the server');
 });
 
-function getuserdet() {
+function getuserDetails() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'login.php?id='+id, function(data) {
+	$.getJSON(serviceURL + 'getuserdetails.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#userDet li').remove();
-		userdetails = data.items;
-		$.each(userdetails, function(index, userdetail) {
-			$('#userDet').append('<li>' + userdetail.customers_firstname + ' ' + userdetail.customers_lastname
-					'<p class="line1">' + userdetail.customers_email_address + '</p>');
+		pdetails = data.items;
+		$.each(pdetails, function(index, pdetail) {
+			$('#userDet').append('<li>' + pdetail.customers_firstname + ' ' + pdetail.customers_lastname + '>' +
+					'<br>' + pdetail.customers_email_address + '<br>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
 		});
 	});
 }
-
 
 function getUrlVars() {
     var vars = [], hash;
