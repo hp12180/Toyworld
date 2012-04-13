@@ -22,7 +22,7 @@ function getsubcagoriesList() {
 		subcats = data.items;
 		$.each(subcats, function(index, subcat) {
 			$('#subcategoriesList').append('<div class="tile"><a href="subcategories.html?id=' + subcat.categories_id + '">' +
-					subcat.categories_name);
+					subcat.categories_name + '</a></div>');
 		});
 		$('#subcategoriesList').append('<\div>');
 		setTimeout(function(){
