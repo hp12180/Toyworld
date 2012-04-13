@@ -112,7 +112,7 @@ li .action-icon {
  	background: #666666; /* for non-css3 browsers */
 	background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#666666), color-stop(.6,#333));
 	color: #FFFFFF;
-	top: 0px; 
+	top: 50px; 
 	height: 60px;
 	width: 100%;
 	border-bottom: solid 1px #444444;
@@ -127,7 +127,6 @@ li .action-icon {
 
 .header > .nav {
 	position: absolute;
-	top:50px;
 	left: 12px;
 	height:100%;
 	padding-top: 18px;
@@ -136,7 +135,6 @@ li .action-icon {
 }
 .header > .nav1 {
 	position: absolute;
-	top:50px;
 	left: 102px;
 	height:100%;
 	padding-top: 18px;
@@ -162,7 +160,7 @@ li .action-icon {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FBFBFB), color-stop(100%,#ECEFF2));
 	color: #000000;
 	font-weight: bold;
-	top: 61px; 
+	top: 111px; 
 	height: 40px;
 	left: 0px;
 	right: 0px;
@@ -178,7 +176,7 @@ li .action-icon {
 
 #wrapper {
 	position: absolute; 
-	top: 120px; 
+	top: 170px; 
 	bottom: 0px;
 	width: 100%;
 	overflow: auto;
