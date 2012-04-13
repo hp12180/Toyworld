@@ -13,7 +13,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getuserDetails() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'getuserdetails.php?id=' + id, function(data) {
+	$.getJSON(serviceURL + 'login.php?id=' + id, function(data) {
 		$('#busy').hide();
 		$('#userDet li').remove();
 		pdetails = data.items;
