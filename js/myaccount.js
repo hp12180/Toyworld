@@ -1,6 +1,6 @@
-var id = 'hp12180@yahoo.com';
-var pwd = 'getright';
 var serviceURL = localStorage['serviceURL'];
+
+var id = getUrlVars()["id"];
 
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
@@ -16,7 +16,7 @@ $(document).ajaxError(function(event, request, settings) {
 
 function getuserdet() {
 	$('#busy').show();
-	$.getJSON(serviceURL + 'login.php?id='+id+'&pwd='+pwd, function(data) {
+	$.getJSON(serviceURL + 'login.php?id='+id, function(data) {
 		$('#busy').hide();
 		$('#userDet li').remove();
 		userdetails = data.items;
