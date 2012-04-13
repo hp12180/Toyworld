@@ -3,7 +3,6 @@ var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScro
 
 var id = getUrlVars()["id"];
 
-var prodid;
 $(window).load(function() {
 	setTimeout(getprodDetails, 100);
 });

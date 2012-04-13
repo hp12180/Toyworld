@@ -1,13 +1,9 @@
 var serviceURL = localStorage['serviceURL'];
-
+var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 var id = getUrlVars()["id"];
 
-var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-
-var userdetails;
-
 $(window).load(function() {
-	setTimeout(getuserdet, 10000);
+	setTimeout(getuserdet, 100);
 });
 
 $(document).ajaxError(function(event, request, settings) {
