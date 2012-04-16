@@ -17,8 +17,10 @@ function getbrandList() {
 		$('#brandList li').remove();
 		brands = data.items;
 		$.each(brands, function(index, brand) {
-			$('#brandList').append('<li><a href="branddet.html?id=' + brand.manufacturers_id + '">' +
-					'<img src="http://toyworld.in/catalog/images/' + brand.manufacturers_image + '" width="100">' + brand.manufacturers_name + ' (' +brand.tot_prods + ')</a></li>');
+			$('#brandList').append('
+			
+			<li><a href="branddet.html?id=' + brand.manufacturers_id + '">' +
+					'<table><tr><td><img src="http://toyworld.in/catalog/images/' + brand.manufacturers_image + '" width="100"></td><td>' + brand.manufacturers_name + ' (' +brand.tot_prods + ')</td></tr></table></a></li>');
 		});
 		setTimeout(function(){
 			scroll.refresh();
