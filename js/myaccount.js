@@ -1,8 +1,5 @@
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-
-var id = 'hp12180@yahoo.com';
-var pwd = 'getright';
 $(window).load(function() {
 	setTimeout(getuserDetails, 100);
 });
@@ -11,10 +8,17 @@ $(document).ajaxError(function(event, request, settings) {
 	$('#busy').append('Error accessing the server');
 });
 
+function submitform()
+{
+	document.forms["myaccount"].submit();
+}
+
 function getuserDetails() {
 	$('#busy').show();
+	$('#login').show();
 	$.getJSON(serviceURL + 'login.php?id=' + id, function(data) {
 		$('#busy').hide();
+		$('#login').hide();
 		$('#userDet li').remove();
 		pdetails = data.items;
 		$.each(pdetails, function(index, pdetail) {
