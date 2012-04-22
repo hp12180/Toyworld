@@ -1,8 +1,6 @@
 var serviceURL = localStorage['serviceURL'];
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
-$(window).load(function() {
-	setTimeout(getuserDetails, 100);
-});
+
 
 $(document).ajaxError(function(event, request, settings) {
 	$('#busy').append('Error accessing the server');
@@ -11,6 +9,7 @@ $(document).ajaxError(function(event, request, settings) {
 function submitform()
 {
 	document.forms["myaccount"].submit();
+	setTimeout(getuserDetails, 100);
 }
 
 function getuserDetails() {
