@@ -20,7 +20,7 @@ function getprodDetails() {
 		pdetails = data.items;
 		$.each(pdetails, function(index, pdetail) {
 			$('#productDetails').append('<li><img src="http://toyworld.in/catalog/images/' + pdetail.products_image + '" width="100%">' +
-					'<br>' + pdetail.products_description + '<br><br><img src="img/ages/a' + pdetail.products_minage + '.jpg"><img src="img/ages/b ' + pdetail.products_maxage + '.jpg"><br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
+					'<br>' + pdetail.products_description + '<br><br><img src="img/ages/a' + pdetail.products_minage + '.gif"><img src="img/ages/b ' + pdetail.products_maxage + '.gif"><br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
 			$('#productName').append('<h2>' + pdetail.products_name + '</h2>');
 		});
 		setTimeout(function(){
