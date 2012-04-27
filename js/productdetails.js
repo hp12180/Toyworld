@@ -19,8 +19,17 @@ function getprodDetails() {
 		$('#productName li').remove();
 		pdetails = data.items;
 		$.each(pdetails, function(index, pdetail) {
+			picons = '';
+			if (pdetail.products_ordered > 0)
+			{
+			picons = picons + '<img src="img/icons/icon_hot.gif">';
+			}
+			if (pdetail.specials_new_products_price > 0)
+			{
+			picons = picons + '<img src="img/icons/icon_bargain.gif">';
+			}
 			$('#productDetails').append('<li><img src="http://toyworld.in/catalog/images/' + pdetail.products_image + '" width="100%">' +
-					'<br>' + pdetail.products_description + '<br><br><img src="img/ages/a' + pdetail.products_minage + '.gif"><img src="img/ages/b' + pdetail.products_maxage + '.gif"><br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
+					'<br>' + pdetail.products_description + '<br><br><img src="img/ages/a' + pdetail.products_minage + '.gif"><img src="img/ages/b' + pdetail.products_maxage + '.gif">' + picons + '<br><b>Price Rs.' + pdetail.total_price + '</b><br><br>');
 			$('#productName').append('<h2>' + pdetail.products_name + '</h2>');
 		});
 		setTimeout(function(){
