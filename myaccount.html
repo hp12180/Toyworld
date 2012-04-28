@@ -26,10 +26,23 @@
 	<div id="wrapper">
     <ul id="login">
     <p>This is the ToyWorld.in shopping app. The app allows you to: <ul><li>Shop for toys, sports and baby products.</li><li>Track orders from your device</li><li>Submit pictures and get personalised gifts.</li><li>Share your favourites with friends and family.</li><li>Make life simple and keep kids happy.</li></ul></p>
-	<form id="myaccount" action="http://toyworld.in/app/services/login.php">
-	Login: <input type="text" name="id"><input type="password" name="pwd"> 
-	<a href="javascript: submitform()">Submit</a>
-	</form>
+	            <section>
+            <div class="sectionhead">
+                    <h1><strong>Sign Up</strong></h1>
+                </div>
+                <form class="forms" action="http://toyworld.in/app/services/login.php" type="POST">
+                    <h1>Please enter <strong>Your Details</strong></h1>
+                    <input type="text" placeholder="Full Name" />
+                    <input type="email" placeholder="Email Address" />
+                    <input type="tel" placeholder="Mobile Number" />
+                    <input type="text" placeholder="Username" />
+                    <input type="password" placeholder="Password" />
+                    <p class="terms">
+                    <a href="terms.html">View Terms</a>
+                    <input type="button" value="Click me" class="green_btn" />
+                    </p>
+                </form>
+            </section>
     </ul>
 	<ul id="userDet"></ul>
 	</div>
