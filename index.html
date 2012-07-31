@@ -1,30 +1,51 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Toyworld.in</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Auth Demo 2</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
+	<script src="jquery.mobile/jquery-1.7.2.min.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
+	<script src="main.js"></script>
+</head>
 
-    <body>
-	<div id="logo" class="logo">
-	   <img src="img/twlogo-50.jpg">
-	</div>
-	<div id="header" class="header">
-	<a href="index.html" class="nav">Home</a>
-	<a href="brands.html" class="nav">Brands</a>
-	<a href="cats.html" class="nav">Categories</a>
-	<a href="age.html" class="nav">Age</a>
-	<a href="price.html" class="nav">Price</a>
-	</div>
-		<div id="wrapper">
-			<ul id="mainDet"> </ul>
-		</div>
-	<script src="js/phonegap.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/iscroll.js"></script>
-    <script src="js/main.js"></script>
+<body onload="init()">
 
-    </body>
+<div id="launcherPage" data-role="page">
+	<!-- I'm just here waiting for deviceReady -->
+</div>
 
+<div id="loginPage" data-role="page">
+
+    <div data-role="header">
+        <h1>Login</h1>
+    </div>
+
+    <div data-role="content">    
+
+        <form id="loginForm">
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="" placeholder="Username" />
+        </div>
+
+        <div data-role="fieldcontain" class="ui-hide-label">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="" placeholder="Password" />
+        </div>
+
+        <input type="submit" value="Login" id="submitButton">
+        </form>
+        
+    </div>
+
+    <div data-role="footer">
+        <h4>&copy; toyworld.in</h4>
+    </div>
+
+</div>
+
+</body>
 </html>
