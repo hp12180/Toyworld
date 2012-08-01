@@ -3,7 +3,6 @@ $(document).bind('deviceready', function(){
         $('form').submit(function(){
             var landmarkID = $(this).parent().attr('data-landmark-id');
             var postData = $(this).serialize();
-            
             $.ajax({
                 type: 'POST',
                 data: postData+'&lid='+landmarkID,
@@ -17,7 +16,6 @@ $(document).bind('deviceready', function(){
                     alert('There was an error adding your comment');
                 }
             });
-            
             return false;
         });
     });
