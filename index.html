@@ -1,50 +1,41 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">	
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>Auth Demo 2</title>
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
-	<script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
-	<script src="jquery.mobile/jquery-1.7.2.min.js"></script>
-	<script src="jquery.mobile/jquery.mobile-1.1.0.min.js"></script>
-	<script src="main.js"></script>
-</head>
-
-<body onload="init()">
-
-<div id="launcherPage" data-role="page">
-	<!-- I'm just here waiting for deviceReady -->
-</div>
-
-<div id="loginPage" data-role="page">
-
-    <div data-role="header">
-        <h1>Login</h1>
-    </div>
-
-    <div data-role="content">    
-
-        <form id="loginForm">
-        <div data-role="fieldcontain" class="ui-hide-label">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" value="" placeholder="Username" />
-        </div>
-
-        <div data-role="fieldcontain" class="ui-hide-label">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="" placeholder="Password" />
-        </div>
-
-        <input type="submit" value="Login" id="submitButton">
-        </form>
+        <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
+        <link rel="stylesheet" href="css/styles.css" />
+	<title>Toyworld.in login</title>
+	<script src="js/phonegap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/post.js"></script>
         
-    </div>
+    <script>
+        function onBodyLoad() {		
+            document.addEventListener("deviceready",onDeviceReady,false);
+        }
+    </script>
+        
+    <style>
+        label, b {
+            display: block;
+        }
+    </style>
+</head>
+<body onload="onBodyLoad()">
 
-    <div data-role="footer">
-        <h4>&copy; toyworld.in</h4>
-    </div>
+<div id="landmark-1" data-landmark-id="1">
+	<form>
+		<label for="email">
+			<b>Email</b>
+			<input type="email" id="email" name="email">
+		</label>
 
+		<label for="password">
+			<b>Password</b>
+			<input type="password" id="password" name="password">
+		</label>
+
+		<input type="submit" value="Save">
+	</form>
 </div>
 
 </body>
