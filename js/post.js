@@ -8,7 +8,7 @@ $(document).ajaxError(function(event, request, settings) {
 	$('#busy').append('Error accessing the server');
 });
 
-$('lform').submit(function(){
+$("#lform").on("submit",function(e) {
 	$('#busy').show();
 	$.getJSON(serviceURL + 'login.php?email=' + email + '&password=' + password, function(data) {
 		$('#busy').hide();
