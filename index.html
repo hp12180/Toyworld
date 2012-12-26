@@ -8,45 +8,45 @@
 	<script src="js/phonegap.js"></script>
     <script src="js/jquery.js"></script>
 	<script src="js/iscroll.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/login.js"></script>
+    <script src="js/post.js"></script>
 </head>
 
 <body onload="init()">
     
-<div id="loginPage" data-role="page">
+<div id="loginPage">
 
-    <div data-role="header">
+    <div id="header">
         <h1>ToyWorld Login</h1>
     </div>
 
-    <div data-role="content">    
+    <div id="content">    
 
-        <form id="loginForm">
-        <div data-role="fieldcontain" class="ui-hide-label">
+        <form id="loginForm" action="loginstatus.html">
+        <div class="ui-hide-label">
             <label for="username">Email:</label>
-            <input type="text" name="username" id="username" value="" placeholder="Username" />
+            <input type="text" name="email" id="email" value="" placeholder="Email" />
         </div>
 
-        <div data-role="fieldcontain" class="ui-hide-label">
+        <div class="ui-hide-label">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="" placeholder="Password" />
         </div>
+		<a href="javascript: submitform()">Login</a></form>
 
-        <input type="submit" value="Login" id="submitButton">
         </form>
         
     </div>
 
-    <div data-role="footer">
+    <div id="footer">
         <h4>&copy; ToyWorld</h4>
     </div>
 
 </div>
-
-<script>
-$("#loginPage").live("pageinit", function(e) {
-        checkPreAuth();
-    });
+<script type="text/javascript">
+function submitform()
+{
+  document.loginForm.submit();
+}
 </script>
 
 </body>
