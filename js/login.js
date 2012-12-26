@@ -1,3 +1,6 @@
+var serviceURL = localStorage['serviceURL'];
+var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
+
 function init() {
 document.addEventListener("deviceready", deviceReady, true);
 delete init;
@@ -21,7 +24,7 @@ function handleLogin() {
     var p = $("#password", form).val();
     console.log("click");
     if(u != '' && p!= '') {
-        $.post("http://toyworld.in/app/services/login.php", {email:u,password:p}, function(res) {
+		$.getJSON(serviceURL + 'login.php?email=' + u + '&password=' + p, function(res) {
             if(res == true) {
                 //store
                 window.localStorage["username"] = u;
