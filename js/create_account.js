@@ -65,7 +65,7 @@ $(function() {
         .append("<p>Congratulations.</p>")
         .hide()
         .fadeIn(1500, function() {
-          $('#message').append("<img id='checkmark' src='images/check.png' />");
+          $('#message').append("<img id='checkmark' src='img/register/check.png' />");
         });
       }
      });
