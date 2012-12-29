@@ -5,7 +5,7 @@ body                	{ font-size:62.5%; font-family:Arial, Helvetica, sans-serif
                       	background: #009FAA url(/images/body_bg.png) repeat-x;
 												margin-top:40px; }
 
-#contact_form					{ width:600px; margin:0 auto; height:200px; padding:10px 0;
+#contact_form					{ width:600px; margin:0 auto; padding:10px 0;
 												background: transparent url(/images/form_bg.png) no-repeat;
                         position:relative; }
 form fieldset					{ font-family:Verdana, Arial, Helvetica, sans-serif; font-size:1.2em;
@@ -21,16 +21,24 @@ label.error           { font-weight:normal;color:red;text-align:left;width:140px
 input.text-input			{ margin:4px;padding:2px 0;color:#333; }
 
 label#name_label      { position:absolute; top:0; left:0; }
-input#name            { position:absolute; top:0; left:110px; }
-label#name_error      { position:absolute; top:22px; left:120px; }
+input#name            { position:absolute; top:0; left:210px; }
+label#name_error      { position:absolute; top:22px; left:220px; }
 
 label#email_label     { position:absolute; top:45px; left:0px; }
-input#email           { position:absolute; top:45px; left:110px; }
-label#email_error      { position:absolute; top:67px; left:120px; }
+input#email           { position:absolute; top:45px; left:210px; }
+label#email_error      { position:absolute; top:67px; left:220px; }
 
 label#phone_label     { position:absolute; top:90px; left:0px; }
-input#phone           { position:absolute; top:90px; left:110px; }
-label#phone_error      { position:absolute; top:112px; left:120px; }
+input#phone           { position:absolute; top:90px; left:210px; }
+label#phone_error      { position:absolute; top:112px; left:220px; }
+
+label#pwd_label     { position:absolute; top:135px; left:0px; }
+input#pwd           { position:absolute; top:135px; left:210px; }
+label#pwd_error      { position:absolute; top:157px; left:220px; }
+
+label#pwd2_label     { position:absolute; top:180px; left:0px; }
+input#pwd2           { position:absolute; top:180px; left:210px; }
+label#pwd2_error      { position:absolute; top:202px; left:220px; }
 
 input.button					{ position:absolute; top:125px; left:120px; padding:3px 6px;
                         border:2px solid #fff; margin:20px 0px 0px 0px; color:#3D7169; 
