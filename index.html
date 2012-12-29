@@ -3,52 +3,49 @@
 
 <head>
         <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
-    <title>Auth Demo</title>
-    <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.0rc2.css" type="text/css" charset="utf-8" />
-    <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/pg.js"></script>
-    <script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/main2.js"></script>
+        <link rel="stylesheet" href="css/styles.css" />
+	<title>Toyworld.in</title>
 </head>
 
 <body onload="init()">
     
-<div id="loginPage" data-role="page">
+<div id="loginPage">
 
-    <div data-role="header">
-        <h1>Login</h1>
-		<a href="test/tutorial.html">test</a>
+    <div id="header">
+        <h1>ToyWorld Login</h1>
     </div>
 
-    <div data-role="content">    
-
-        <form id="loginForm">
-        <div data-role="fieldcontain" class="ui-hide-label">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" value="" placeholder="Username" />
+    <div id="content">    
+		<a href="test/tutorial.html">test</a>
+        <form id="lform" name="lform">
+        <div class="ui-hide-label">
+            <label for="username">Email:</label>
+            <input type="text" name="email" id="email" value="" placeholder="Email" />
         </div>
 
-        <div data-role="fieldcontain" class="ui-hide-label">
+        <div class="ui-hide-label">
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" value="" placeholder="Password" />
         </div>
-
-        <input type="submit" value="Login" id="submitButton">
-        </form>
+		<br>
+		<input type="submit" value="Login">
+		</form>
         
     </div>
-
-    <div data-role="footer">
-        <h4>&copy; Toyworld</h4>
+	<div id="wrapper">
+		<ul id="loginstatus"> </ul>
+	</div>
+	<div id="busy"/>Loading...</div>
+    <div id="footer">
+        <h4>&copy; ToyWorld</h4>
     </div>
 
 </div>
 
-<script>
-$("#loginPage").live("pageinit", function(e) {
-        checkPreAuth();
-    });
-</script>
+	<script src="js/phonegap.js"></script>
+	<script src="js/jquery.js"></script>
+    <script src="js/iscroll.js"></script>
+	<script src="js/post.js"></script>
 
 </body>
 </html>
