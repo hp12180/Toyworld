@@ -1,51 +1,36 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
-        <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
+    <link rel="stylesheet" href="css/styles.css" />
 	<title>Toyworld.in</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="js/jquery.js"></script>
+<script src="test/js/runonload.js"></script>
+<script src="test/js/tutorial.js"></script>
+<link href="test/css/tutorial.css" media="all" type="text/css" rel="stylesheet">
 </head>
 
-<body onload="init()">
-    
-<div id="loginPage">
-
-    <div id="header">
-        <h1>ToyWorld Login</h1>
-    </div>
-
-    <div id="content">    
-		<a href="test/tutorial.html">test</a>
-        <form id="lform" name="lform">
-        <div class="ui-hide-label">
-            <label for="username">Email:</label>
-            <input type="text" name="email" id="email" value="" placeholder="Email" />
-        </div>
-
-        <div class="ui-hide-label">
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" value="" placeholder="Password" />
-        </div>
-		<br>
-		<input type="submit" value="Login">
-		</form>
-        
-    </div>
-	<div id="wrapper">
-		<ul id="loginstatus"> </ul>
-	</div>
-	<div id="busy"/>Loading...</div>
-    <div id="footer">
-        <h4>&copy; ToyWorld</h4>
-    </div>
-
+<body>
+<div id="contact_form">
+  <form name="contact" method="post" action="">
+    <fieldset>
+      <label for="name" id="name_label">Name</label>
+      <input type="text" name="name" id="name" size="30" value="" class="text-input" />
+      <label class="error" for="name" id="name_error">This field is required.</label>
+      
+      <label for="email" id="email_label">Return Email</label>
+      <input type="text" name="email" id="email" size="30" value="" class="text-input" />
+      <label class="error" for="email" id="email_error">This field is required.</label>
+      
+      <label for="phone" id="phone_label">Return Phone</label>
+      <input type="text" name="phone" id="phone" size="30" value="" class="text-input" />
+      <label class="error" for="phone" id="phone_error">This field is required.</label>
+      
+    	<br />
+      <input type="submit" name="submit" class="button" id="submit_btn" value="Send" />
+    </fieldset>
+  </form>
 </div>
-
-	<script src="js/phonegap.js"></script>
-	<script src="js/jquery.js"></script>
-    <script src="js/iscroll.js"></script>
-	<script src="js/post.js"></script>
-
 </body>
 </html>
