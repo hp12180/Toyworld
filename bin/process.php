@@ -8,6 +8,12 @@ if ((isset($_POST['email'])) && (strlen(trim($_POST['email'])) > 0)) {
 if ((isset($_POST['phone'])) && (strlen(trim($_POST['phone'])) > 0)) {
 	$phone = stripslashes(strip_tags($_POST['phone']));
 } else {$phone = 'No phone entered';}
+if ((isset($_POST['pwd'])) && (strlen(trim($_POST['pwd'])) > 0)) {
+	$pwd = stripslashes(strip_tags($_POST['pwd']));
+} else {$pwd = 'No password entered';}
+if ((isset($_POST['pwd2'])) && (strlen(trim($_POST['pwd2'])) > 0)) {
+	$pwd2 = stripslashes(strip_tags($_POST['pwd2']));
+} else {$pwd2 = 'No password re-typed';}
 ob_start();
 ?>
 <html>
@@ -29,10 +35,18 @@ ob_start();
     <td>Phone</td>
     <td><?=$phone;?></td>
   </tr>
+  <tr bgcolor="#eeffee">
+    <td>Password</td>
+    <td><?=$pwd;?></td>
+  </tr>
+  <tr bgcolor="#eeffee">
+    <td>Re-Type Password</td>
+    <td><?=$pwd2;?></td>
+  </tr>
 </table>
 </body>
 </html>
-<?
+<?php
 $body = ob_get_contents();
 
 $to = 'someone@example.com';

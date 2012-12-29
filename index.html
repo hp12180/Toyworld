@@ -2,13 +2,13 @@
 <html>
 
 <head>
-        <title>Toyworld.in</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
-        <link rel="stylesheet" href="css/styles.css" />
-<script src="js/jquery-1.2.3.pack.js"></script>
-<script src="js/runonload.js"></script>
-<script src="js/tutorial.js"></script>
-<link href="css/tutorial.css" media="all" type="text/css" rel="stylesheet">
+    <title>Toyworld.in</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, target-densityDpi=device-dpi"/>
+    <link rel="stylesheet" href="css/styles.css" />
+	<script src="js/jquery-1.2.3.pack.js"></script>
+	<script src="js/runonload.js"></script>
+	<script src="js/tutorial.js"></script>
+	<link href="css/tutorial.css" media="all" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,15 +19,23 @@
       <input type="text" name="name" id="name" size="30" value="" class="text-input" />
       <label class="error" for="name" id="name_error">This field is required.</label>
       
-      <label for="email" id="email_label">Return Email</label>
+      <label for="email" id="email_label">Email</label>
       <input type="text" name="email" id="email" size="30" value="" class="text-input" />
       <label class="error" for="email" id="email_error">This field is required.</label>
       
-      <label for="phone" id="phone_label">Return Phone</label>
+      <label for="phone" id="phone_label">Cell Phone</label>
       <input type="text" name="phone" id="phone" size="30" value="" class="text-input" />
       <label class="error" for="phone" id="phone_error">This field is required.</label>
-      
-    	<br />
+	  	        
+      <label for="pwd" id="pwd_label">Password</label>
+      <input type="text" name="pwd" id="pwd" size="30" value="" class="text-input" />
+      <label class="error" for="pwd" id="pwd_error">This field is required.</label>
+            
+      <label for="pwd2" id="pwd2_label">Re-Type Password</label>
+      <input type="text" name="pwd2" id="pwd2" size="30" value="" class="text-input" />
+      <label class="error" for="pwd2" id="pwd2_error">This field is required.</label>
+      <label class="error" for="pwd2" id="pwd3_error">Password Mismatch.</label>
+	  <br />
       <input type="submit" name="submit" class="button" id="submit_btn" value="Send" />
     </fieldset>
   </form>

@@ -31,18 +31,38 @@ $(function() {
       $("input#phone").focus();
       return false;
     }
+	
+		var pwd = $("input#pwd").val();
+		if (pwd == "") {
+      $("label#pwd_error").show();
+      $("input#pwd").focus();
+      return false;
+    }
+	
+		var pwd2 = $("input#pwd2").val();
+		if (pwd2 == "") {
+      $("label#pwd2_error").show();
+      $("input#pwd2").focus();
+      return false;
+    }
 		
-		var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone;
+		if (pwd2 != pwd) {
+      $("label#pwd3_error").show();
+      $("input#pwd2").focus();
+      return false;
+    }
+		
+		var dataString = 'name='+ name + '&email=' + email + '&phone=' + phone + '&pwd=' + pwd + '&pwd2=' + pwd2;
 		//alert (dataString);return false;
 		
 		$.ajax({
       type: "POST",
-      url: "bin/process.php",
+      url: "http://toyworld.in/app/services/new_account.php",
       data: dataString,
       success: function() {
         $('#contact_form').html("<div id='message'></div>");
-        $('#message').html("<h2>Contact Form Submitted!</h2>")
-        .append("<p>We will be in touch soon.</p>")
+        $('#message').html("<h2>New Account has been Created!</h2>")
+        .append("<p>Congratulations.</p>")
         .hide()
         .fadeIn(1500, function() {
           $('#message').append("<img id='checkmark' src='images/check.png' />");
